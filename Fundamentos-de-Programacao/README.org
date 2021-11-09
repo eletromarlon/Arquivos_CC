@@ -1,0 +1,2 @@
+## Materia de Fundamentos de ProgramaçãoMaterial de estudos de Ciência da Computação 
+## O foco dessa disciplina foi na linguagem C
