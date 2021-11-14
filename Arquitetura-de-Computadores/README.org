@@ -1,0 +1,2 @@
+## Materia relacionado à cadeira de Arquitetura de computadores. Nesta cadeira estudamos os principais
+## "mecanismo" que se alinham para produzir as diversas tarefas que um Computador pode realizar.
