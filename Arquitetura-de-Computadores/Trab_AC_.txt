@@ -1,0 +1,30 @@
+Programa em assembly:
+
+; Programa para calcular a expressão aritmética indicada
+; MARLON GONÇALVES DUARTE - 493408
+; LUIZ ZAIRO BASTOS VIANA - 499995
+; Problema 3 (493408 + 499995 = 993403)
+; (Final 3) - R = X*Z + Y - Z - X
+; CALCULO DE CONSUMO DE MEMORIA:
+; Segundo o manual do próprio simulador - 
+; "For simplicity every instruction (and operand) is 1 byte."
+; Dessa forma, o código que desenvolvemos utiliza 20 bytes
+; de memória RAM, HLT não ocupa memória RAM,pois é uma instrução 
+; de finalização do código.
+; CALCULO DE CICLOS DE INSTRUÇÃO:
+; A criação de variáveis é apenas uma abstração, na realidade
+; o código só utiliza valores numéricos, portanto, a declaração
+; não consome ciclos de instrução.
+; Total de ciclos do código: 9.
+
+JMP start ; 2 ciclos - Instrução e pulo para 5
+	X: DB 3
+	Y: DB 36
+	Z: DB 4
+start:
+	MOV A, [X] ; 3 ciclos - Instrução; transporte; busca endereço 
+	MUL [4]	; 2 ciclo - '[4]' end. de Z
+	ADD A, [3]; 3 ciclos - Instrução; transporte; busca endereço
+	SUB A, [4]; 3 ciclos - Instrução; transporte; busca endereço
+	SUB A, [2]; 3 ciclos Instrução; transporte; busca endereço
+HLT

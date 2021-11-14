@@ -1,0 +1,42 @@
+;código para soma de dois números
+start:
+MOV A, [x] ; copia o conteudo de x para o reg A
+MOV B, [y] ; copia o conteudo de y para o reg B
+ADD B, A ; soma o valor de A a B e salva em B
+HLT ; Stop execution
+
+x: DB 10
+y: DB 11
+
+
+;código para implementar um loop
+JMP start
+x: DB 0 ; não são código por isso precisa 
+y: DB 10 ; do jump indicando o começo
+loop:
+MOV C, [x] ; copia o conteudo de x para C
+ADD C, 1 ; incrementa em 1
+MOV [x],C ; copia o valor de C para o conteudo de x
+start:
+MOV A, [x] ; copia o conteudo de x para o reg A
+MOV B, [y] ; copia o conteudo de y para o reg B
+SUB B, A ; subtrai o valor de A a B e salva em B
+JNZ loop ; pula a execucao do cod para loop se A!=B
+HLT ; Stop execution
+
+;código para implementar um loop
+JMP start
+x: DB 0
+y: DB 10
+start:
+MOV A, [x] ; copia o conteudo de x para o reg A
+MOV B, [y] ; copia o conteudo de y para o reg B
+SUB B, A ; subtrai o valor de A a B e salva em B
+JNZ loop ; pula a execucao do cod para loop se A!=B
+HLT ; Stop execution
+loop:
+MOV C, [x] ; copia o conteudo de x para C
+;ADD C, 1 ; incrementa em 1
+INC C ; igual à linha anterior
+MOV [x],C ; copia o valor de C para o conteudo de x
+JMP start
